@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -6,15 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paniikkiäppi</title>
   <style>
+    :root {
+      color-scheme: light;
+    }
     body {
       margin: 0;
       padding: 0;
       font-family: 'Quicksand', 'Helvetica Neue', sans-serif;
-      background: linear-gradient(160deg, #d6ecfa, #edf4fb, #e0f7fa);
+      background: linear-gradient(160deg, #d0e9f5, #eaf4fc, #d6f3f7);
       color: #333;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       height: 100vh;
       text-align: center;
@@ -22,9 +26,10 @@
     }
     #content {
       max-width: 90%;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       padding: 1rem;
-      background: rgba(255, 255, 255, 0.8);
+      margin-top: 120px;
+      background: rgba(255, 255, 255, 0.85);
       border-radius: 16px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
       opacity: 0;
@@ -40,7 +45,7 @@
     button {
       margin-top: 2rem;
       padding: 1rem 2.5rem;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       border: none;
       border-radius: 999px;
       background: linear-gradient(90deg, #fdd9d9, #ffe6c7);
@@ -63,9 +68,9 @@
       width: 200px;
       height: 200px;
       margin: 30px auto;
-      background: radial-gradient(circle, #fde2e2, #fad9d9);
+      background: radial-gradient(circle, #fce4ec, #f8bbd0);
       border-radius: 50%;
-      box-shadow: 0 0 60px rgba(253, 226, 226, 0.6);
+      box-shadow: 0 0 60px rgba(252, 228, 236, 0.6);
       animation: breath 8s ease-in-out infinite;
     }
     @keyframes breath {
@@ -87,6 +92,12 @@
     const steps = [
       "Näytöllä näkyvä pallo voi auttaa sinua rauhoittumaan. Hengitä sen tahtiin – sisään kun se kasvaa, ulos kun se pienenee.",
       "Ahdistus on tunne joka sävyttää joskus meidän kaikkien elämää. Se ei ole vaarallista, mutta se voi tuntua joskus kurjalle.",
+      "Mikä on tämänhetkisen ahdistuksesi voimakkuus asteikolla 1–10?",
+      "Ahdistus on kehon tapa kertoa, että jokin on kesken, pielessä tai kaipaa huomiota.",
+      "Mikä sinua juuri nyt huolettaa tai kuormittaa?",
+      "Miltä sinusta tuntuu? Mitä tunteita huomaat?",
+      "Vaikka ajatukset ja tunteet tuntuvat hankalilta, ne eivät ole vaarallisia. Ne ovat vain mielemme tuotoksia.",
+      "Niistä ei tarvitse päästä eroon, eikä niitä tarvitse voimistaa. Voi vain antaa niiden olla.",
       "Seuraavaksi vien sinut läpi harjoituksen, jonka tehtävänä on rauhoittaa sinua ja auttaa sinua muistamaan, että et ole yhtä kuin sinun ajatukset tai tunteet.",
       "Aloitetaan.",
       "Aloitetaan kolmella rauhallisella hengityksellä. Hengitä sisään syvään nenän kautta ja puhalla ulos suun kautta.",
@@ -97,11 +108,12 @@
       "Kuuntele hetki. Mikä on hiljaisin ääni jonka kuulet juuri nyt?",
       "Hengitä sisään nenän kautta. Onko ilmassa jokin tuoksu?",
       "Ajatukset ja tunteet ovat kuin aaltoja. Ne tulevat ja menevät.",
-      "Sinun ei tarvitse päästä niistä eroon. Ne eivät ole vaarallisia.",
       "Voit keskittyä siihen, mikä on tärkeää. Pienikin askel riittää.",
       "Kiitos, että pysähdyit. Nyt voit hetken vain hengitellä pallon tahdissa.",
       "",
-      "Miltä minusta nyt tuntuu?"
+      "Miltä sinusta nyt tuntuu?",
+      "Mikä on ahdistuksesi voimakkuus nyt, asteikolla 1–10?",
+      "Kiitos kun olit läsnä. Voit palata tähän hetkeen koska tahansa."
     ];
 
     let index = -1;
